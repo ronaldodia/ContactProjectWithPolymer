@@ -13,6 +13,18 @@ class ContactModel extends ConceptModel {
   }
 
   Contacts get contacts => getEntry(contact);
+  
+  
+  
+  init() {
+      var contact = new Contact();
+      contact.code = 'univnktt@gmail.com';
+      contact.name = 'EL hassen';
+      contact.phone='418-555-6548';
+      contacts.add(contact);
+
+  
+    }
 void set contacts(Contacts contacts){
   contacts=contacts;
 }

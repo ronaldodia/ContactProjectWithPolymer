@@ -10,11 +10,7 @@ class ContactList extends PolymerElement {
   InputElement email;
   InputElement phone;
   InputElement keyword;
-  enteredView() {
-    super.enteredView();
 
-    contacts.internalList = toObservable(contacts.internalList);
-  }
 
   ContactList.created() : super.created();
 
@@ -47,7 +43,7 @@ class ContactList extends PolymerElement {
         // contacts.sort();
         save();
       } else {
-        message.text = 'email not found! Please select a row';
+        message.text = 'This email already exists';
       }
     }
   }
@@ -82,7 +78,7 @@ class ContactList extends PolymerElement {
           contacts.add(contact);
           save();
         }} catch(exception, stackTrace) {
-          message.text = 'Contact with that email already exists';
+          message.text = 'email not found! Please select a row';
         }
       }
     }
@@ -91,20 +87,20 @@ class ContactList extends PolymerElement {
     LabelElement message = shadowRoot.querySelector("#message-search");
     keyword= shadowRoot.querySelector("#keyword");  
     if (keyword.value.trim() == '') {
-      loadContacts(contacts);
-  
-          }
-    else{
-          contacts = contacts.select((f) => f.onName(keyword.value));
+      
+      contacts =new Contacts();
+      contacts.fromJson(JSON.decode(window.localStorage['contacts']));
+      message.text = 'email not provided!';
+    }else{
+      contacts = contacts.select((f) => f.onName(keyword.value));
+               keyword.value='';
     }
+   
+   // Contacts lst = new Contacts();
+         
     
   }
-  void loadContacts(Contacts contacts) {
-     contacts.clear();
-     contacts.fromJson(JSON.decode(window.localStorage['contacts']));
-
-
-   }
+  
   delete(Event e, var detail, Node target) {
     String email_table = target.attributes['contact-email'];
     LabelElement message = shadowRoot.querySelector("#message");
