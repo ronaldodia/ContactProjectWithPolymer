@@ -94,6 +94,7 @@ class ContactList extends PolymerElement {
     }else{
       contacts = contacts.select((f) => f.onName(keyword.value));
                keyword.value='';
+               if(contacts.length==0) message.text = 'no result with given keyword!';
     }
    
    // Contacts lst = new Contacts();
