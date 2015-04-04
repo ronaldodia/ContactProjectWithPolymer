@@ -10,4 +10,8 @@ body {
     user-select: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-touch-callout: none;
+    background: #D5DEEC url('images/touch/Yellow-blur-background1.jpg'); /* Fond de page bleu clair, avec une image de fond (bleu clair aussi) */
+  font: 14px serif;                    /* Style et taille de la police de la page */
+  margin: 1em; 
 }
+

@@ -3,120 +3,37 @@
 <polymer-element name="contact-list">
   <template>
     <style>
-     table {
-        border-top: 1px solid #999;
-        border-left: 1px solid #999;
-        border-collapse: collapse;
-      }  
-      caption {
-        font-family: arial, sans-serif;
-        font-size: 16px;
-        font-weight: bold;
-        color: #003366;
-        padding: 1px;
-      }    
-      th, td {
-        padding: 1px;
-        border-right: 1px solid #999999;
-        border-bottom: 1px solid #999999;
-      }
-      th {
-        font-family: verdana, sans-serif;
-        font-weight: bold;
-        color: #ffffff;
-        background: #336799;
-      }
-      td {
-        background: #ffe4b5;
-      }  
-      button {
-        padding: 1px;
-        background: #ffcc99;
-        border-right: 1px solid #999;
-        border-bottom: 1px solid #999;
-        border-style: outset;
-        border-color: #d7b9c9;
-        font-weight: bold;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      button:active {
-        background: orangered;
-        border-color: blue;
-      } 
-      a:link {
-        text-decoration: none;
-        font-weight: bold;
-        color: #003366;
-      }   
-      a:visited {
-        text-decoration: none;
-        font-weight: bold;
-        color: #c50000;
-      }   
-      a:hover {
-        text-decoration: none;
-        color: #d9ece2;
-        background: #663117;
-      }
-      .marker {
-        font-family: arial, sans-serif;
-        font-size: 16px;
-        font-weight: bold;
-        color: #003366;
-        background: #ffe4b5;
-        padding: 1px;
-      } 
-      ul {
-        list-style: none;
-        padding: 2px;
-        text-align: left;
-      }
-      li {
-        padding-top: 1px;
-        padding-bottom: 1px;
-        padding-left: 18px;
-      }
-      a:link {
-        text-decoration: none;
-        font-weight: bold;
-        color: #003366;
-      }
-      a:visited {
-        text-decoration: none;
-        font-weight: bold;
-        color: #c50000;
-      }
-      a:hover {
-        text-decoration: none;
-        color: #d9ece2;
-        background: #663117;
-      }
-      .button {
-        padding: 1px;
-        background: #ffcc99;
-        border-right: 1px solid #999;
-        border-bottom: 1px solid #999;
-        border-style: outset;
-        border-color: #d7b9c9;
-        font-weight: bold;
-        text-align: center;
-      }
+ table {
+  width: 50%; /* La largeur c'est pour le test, mais ça montre qu'il est aussi possible de la spécifier en CSS */
+  border: 1px dashed gray; /* Et on met une jolie bordure originale autour du tableau */
+}
+caption {
+  text-align: center; /* Classique : texte centré */
+  font-style: italic; /*             en italique  */
+  font-weight: bold;  /*             en gras      */
+  color: #0066CC;     /*             et en bleu   */
+}
+th { /* Préférable à thead car offre plus de possibilités */
+  background-color: #D3E2ED; /* Chaque case d'en-tête aura un fond bleu */
+  color: #666666;             /* Et un gris un peu plus foncé que la moyenne */
+}
+td {
+  /*border: 1px inset gray;*/ /* Vous pouvez essayer de dé-commenter : cela produit un affichage classique des cases */
+}
     </style>
     <h2>Contacts</h2>
     <div>
-      <label for="name">Name</label>
+   <label for="name">Name</label>
       <input id="name" type="text"/>
       <label for="email">Email</label>
-      <input id="email" type="text"/>
+      <input id="email" type="email"/>
       <label for="phone">Phone</label>
       <input id="phone" type="text"/>
       
       <button on-click="{{add}}" class="button">Add</button>
       <button  class="button" on-click="{{update}}">Update</button>
       <br/>
-      <label id="message"></label>
+      <font color="red"><font size=+2><label id="message"></label></font></font>
     </div>
     <br>
     <div><font color="green">Select a row to update</font></div>

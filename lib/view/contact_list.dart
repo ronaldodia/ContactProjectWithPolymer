@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:html';
 import 'package:polymer/polymer.dart';
 import 'package:ContactProjetctWithPolymer/contacts_library.dart';
-
+import 'package:validator/validator.dart';
 @CustomTag('contact-list')
 class ContactList extends PolymerElement {
   @published Contacts contacts;
@@ -29,10 +29,18 @@ class ContactList extends PolymerElement {
       message.text = 'email is mandatory; ${message.text}';
       error = true;
     }
+    if (!isEmail(email.value)) {
+          message.text = 'email is invalide; ${message.text}';
+          error = true;
+        }
     if (phone.value.trim() == '') {
-      message.text = 'adress is mandatory; ${message.text}';
+      message.text = 'phone is mandatory; ${message.text}';
       error = true;
     }
+    if (!isNumeric(phone.value)) {
+          message.text = 'phone is invalid; ${message.text}';
+          error = true;
+        }
     if (!error) {
       var contact = new Contact();
       contact.email = email.value;
