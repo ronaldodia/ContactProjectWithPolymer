@@ -138,7 +138,7 @@ class ContactList extends PolymerElement {
   }
 
   save() {
-    window.localStorage['contacts_1'] = JSON.encode(toJson());
+    window.localStorage['contacts_2'] = JSON.encode(toJson());
   }
   Contact find(String email) {
     for (Contact contact in contacts) {
