@@ -17,7 +17,7 @@ class ContactsApp extends PolymerElement {
   }
 
   load() {
-    String json = window.localStorage['contacts'];
+    String json = window.localStorage['contacts_1'];
     if (json == null) {
       contacts.init();
     } else {
