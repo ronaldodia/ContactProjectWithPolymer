@@ -19,9 +19,18 @@ class ContactsApp extends PolymerElement {
   load() {
     String json = window.localStorage['contacts_1'];
     if (json == null) {
-      contacts.init();
+      init();
     } else {
       fromJson(JSON.decode(json));
     }
   }
+  init() {
+       var contact = new Contact();
+       contact.code = 'univnktt@gmail.com';
+       contact.name = 'EL hassen';
+       contact.phone='418-555-6548';
+       contacts.add(contact);
+
+   
+     }
 }

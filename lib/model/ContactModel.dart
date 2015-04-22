@@ -27,7 +27,8 @@ class ContactModel extends ConceptModel {
     }
 void set contacts(Contacts contacts){
   contacts=contacts;
-  init() {
+ /*
+  *  init() {
       var contact = new Contact();
       contact.code = 'univnktt@gmail.com';
       contact.name = 'EL hassen';
@@ -35,7 +36,7 @@ void set contacts(Contacts contacts){
       contacts.add(contact);
 
   
-    } 
+    } */
   
 }
 
