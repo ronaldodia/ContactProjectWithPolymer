@@ -2,7 +2,7 @@ ex08
 
 ?/20
 
-formatage SVPL
+formatage SVPL 
 supprimer
   String get name => _name;
   String get phone => _phone;
@@ -13,6 +13,7 @@ supprimer
              _phone = phone;
           }
  Dart != Java
+ 
  en Dart:
    String name;
    String phone;
@@ -20,4 +21,8 @@ supprimer
  Je ne peux pas me ajouter. Je ai commencé avec seulement mon nom, ensuite ajouté email, ensuite ajouté numéro de téléphone.
  
 418-876-9876
-phone is invalid?
+phone is invalid? 
+
+----
+reglé
+----
