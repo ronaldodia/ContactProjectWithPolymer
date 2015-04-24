@@ -1,5 +1,9 @@
 ex08
 
+18/20
+
+(-2) not user-friendly page design
+
 16/20
 
 Search ...Search keyword -> Search by email
