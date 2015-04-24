@@ -1,5 +1,14 @@
 ex08
 
+16/20
+
+Search ...Search keyword -> Search by email
+
+(-2) Après m'être ajoutant, je ne pouvais pas me trouver par email. Ni un contact en k@la.ca. 
+(-2) En outre, une liste de contacts est devenu vide.
+
+----------------------------
+
 ?/20
 
 formatage SVPL 
